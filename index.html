@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東北絶景5座踏破 8日間ドライブ旅</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+:root {
+  --forest: #2d5016;
+  --moss: #4a7c23;
+  --sky: #7bb8d4;
+  --dawn: #e8c07a;
+  --earth: #8b5e3c;
+  --mist: #f0ede8;
+  --snow: #ffffff;
+  --charcoal: #2a2a2a;
+  --accent: #c0392b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--mist);
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.hero {
+  background: linear-gradient(160deg, #1a3a0a 0%, #2d5016 40%, #4a7c23 70%, #7bb8d4 100%);
+  padding: 60px 40px 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23f0ede8' d='M0,80 Q180,20 360,70 Q540,120 720,50 Q900,0 1080,60 Q1260,110 1440,40 L1440,120 L0,120Z'/%3E%3C/svg%3E") no-repeat bottom center / cover;
+}
+
+/* Mountain silhouettes */
+.mountains-svg {
+  position: absolute;
+  bottom: 60px; left: 0; right: 0;
+  opacity: 0.25;
+}
+
+.hero-car {
+  font-size: 48px;
+  animation: drive 8s linear infinite;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes drive {
+  0% { transform: translateX(-60px); }
+  100% { transform: translateX(60px); }
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  margin: 16px 0 8px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.05em;
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 2;
+}
+
+.badge-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  backdrop-filter: blur(4px);
+}
+
+/* MAIN CONTENT */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* DAY CARD */
+.day-card {
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.day-card:nth-child(1) { animation-delay: 0.1s; }
+.day-card:nth-child(2) { animation-delay: 0.2s; }
+.day-card:nth-child(3) { animation-delay: 0.3s; }
+.day-card:nth-child(4) { animation-delay: 0.4s; }
+.day-card:nth-child(5) { animation-delay: 0.5s; }
+.day-card:nth-child(6) { animation-delay: 0.6s; }
+
+.day-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 28px;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-header::after {
+  content: '';
+  position: absolute;
+  right: -20px; top: -20px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  opacity: 0.1;
+  background: white;
+}
+
+.day2 .day-header { background: linear-gradient(135deg, #2d5016, #4a7c23); }
+.day3 .day-header { background: linear-gradient(135deg, #1a5276, #2e86c1); }
+.day4 .day-header { background: linear-gradient(135deg, #5d4037, #8b5e3c); }
+.day5 .day-header { background: linear-gradient(135deg, #4a235a, #7d3c98); }
+.day6 .day-header { background: linear-gradient(135deg, #145a32, #1e8449); }
+.day7 .day-header { background: linear-gradient(135deg, #b7410e, #e74c3c); }
+
+.day-number {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 44px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.3);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.day-title-block { flex: 1; }
+
+.day-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.day-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.day-icon { font-size: 36px; flex-shrink: 0; }
+
+/* SCHEDULE */
+.schedule {
+  padding: 24px 28px;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.schedule-item:last-child { margin-bottom: 0; }
+
+.time-col {
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.time {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--earth);
+  font-variant-numeric: tabular-nums;
+}
+
+.dot-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--moss);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--moss);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--moss), transparent);
+  margin-top: 4px;
+  min-height: 24px;
+}
+
+.item-content { flex: 1; padding-bottom: 4px; }
+
+.item-emoji { font-size: 18px; margin-right: 6px; }
+
+.item-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--charcoal);
+  display: inline;
+}
+
+.item-desc {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* ILLUSTRATION BANNER */
+.illust-banner {
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 28px 8px;
+  border-radius: 12px;
+}
+
+/* ACCOMMODATION */
+.accom-section {
+  background: #f8f6f2;
+  border-top: 2px dashed #ddd;
+  padding: 20px 28px;
+}
+
+.accom-title {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accom-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.accom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.accom-option {
+  border-radius: 10px;
+  padding: 12px;
+  position: relative;
+}
+
+.accom-a { background: linear-gradient(135deg, #fff9e6, #fef3c7); border: 1px solid #f59e0b; }
+.accom-b { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #3b82f6; }
+.accom-c { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 1px solid #22c55e; }
+
+.accom-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+
+.accom-a .accom-label { color: #d97706; }
+.accom-b .accom-label { color: #2563eb; }
+.accom-c .accom-label { color: #16a34a; }
+
+.accom-icon { font-size: 20px; margin-bottom: 4px; }
+.accom-name { font-size: 12px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
+.accom-note { font-size: 11px; color: #777; margin-top: 3px; line-height: 1.4; }
+
+/* MOUNTAIN ILLUSTRATIONS via SVG backgrounds */
+.illust-adatara {
+  background: linear-gradient(180deg, #87ceeb 0%, #b8d4e8 40%, #4a7c23 60%, #2d5016 100%);
+}
+.illust-gassan {
+  background: linear-gradient(180deg, #c8d8e8 0%, #a0b8d0 40%, #6b8fa8 60%, #2d5016 80%, #4a7c23 100%);
+}
+.illust-chokai {
+  background: linear-gradient(180deg, #ff9a56 0%, #ffb380 30%, #87ceeb 50%, #4a7c23 70%, #2d5016 100%);
+}
+.illust-zao {
+  background: linear-gradient(180deg, #6b9eb8 0%, #4a7c8a 30%, #7ab8a0 60%, #2d5016 100%);
+}
+.illust-nishiazuma {
+  background: linear-gradient(180deg, #87ceeb 0%, #a8d8a8 40%, #4a9c23 65%, #2d5016 100%);
+}
+.illust-hamamatsu {
+  background: linear-gradient(180deg, #ff7043 0%, #ff9966 30%, #ffb347 60%, #4488aa 80%, #224466 100%);
+}
+
+/* Mountain shape overlay */
+.illust-banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 140%; height: 70%;
+  clip-path: polygon(10% 100%, 25% 30%, 35% 50%, 50% 0%, 65% 45%, 75% 20%, 90% 100%);
+  background: rgba(0,0,0,0.15);
+}
+
+.illust-banner .banner-text {
+  position: absolute;
+  top: 12px; left: 16px;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.illust-banner .banner-mountain {
+  position: absolute;
+  right: 16px; bottom: 8px;
+  font-size: 28px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.yamap-btn {
+  position: absolute;
+  bottom: 10px; left: 16px;
+  background: rgba(255,255,255,0.92);
+  color: #e8440a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+  z-index: 3;
+}
+
+.yamap-btn:hover {
+  background: #e8440a;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #aaa;
+  font-size: 12px;
+  border-top: 1px solid #e0ddd8;
+}
+
+.footer-icons { font-size: 24px; letter-spacing: 8px; margin-bottom: 8px; }
+
+/* LEGEND */
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #555;
+}
+
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+
+.ld-a { background: #f59e0b; }
+.ld-b { background: #3b82f6; }
+.ld-c { background: #22c55e; }
+
+@media (max-width: 600px) {
+  .accom-grid { grid-template-columns: 1fr; }
+  .day-header { padding: 16px 20px; }
+  .schedule, .accom-section { padding: 16px 20px; }
+  .time-col { width: 70px; }
+}
+
+/* MAP PAGE */
+.map-page {
+  background: #1a2a1a;
+  padding: 0 0 32px;
+}
+
+.map-page-header {
+  padding: 32px 32px 20px;
+  text-align: center;
+}
+
+.map-page-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.map-page-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 6px;
+  letter-spacing: 0.15em;
+}
+
+.map-legend-box {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+.ml-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ml-mountain { background: #4CAF50; }
+.ml-onsen { background: #FF9800; }
+.ml-food { background: #F44336; }
+</style>
+</head>
+<body>
+
+
+
+<!-- HERO -->
+<div class="hero">
+  <svg class="mountains-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" height="100">
+    <path fill="white" d="M0,100 L120,40 L200,70 L320,10 L440,60 L560,20 L680,55 L800,5 L920,50 L1040,15 L1160,45 L1280,25 L1440,60 L1440,100Z"/>
+  </svg>
+  <div class="hero-car">🚗</div>
+  <h1>東北絶景5座踏破<br>8日間ドライブ旅</h1>
+  <p class="hero-sub">宿泊3案併記版 ｜ DAY 2〜7</p>
+  <div class="badge-row">
+    <span class="badge">🥾 登山5座</span>
+    <span class="badge">♨️ 温泉6湯</span>
+    <span class="badge">🍽️ 絶品グルメ</span>
+    <span class="badge">🏠 宿3案</span>
+  </div>
+</div>
+
+<!-- 全行程位置図 -->
+<div class="map-page">
+  <div class="map-page-header">
+    <div class="map-page-title">🗾 全行程 位置図</div>
+    <div class="map-page-sub">DAY 2〜6 ／ 東北エリア全スポット</div>
+  </div>
+
+  <!-- SVGで描いたイラスト地図 -->
+  <div style="background:#e8f4f8;padding:16px;">
+    <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:0 auto;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
+      <!-- 背景 -->
+      <rect width="400" height="520" fill="#d4e8f0" rx="12"/>
+      <!-- 陸地ベース -->
+      <ellipse cx="200" cy="260" rx="160" ry="220" fill="#e8f0e0"/>
+      <!-- 海 -->
+      <path d="M0,0 L400,0 L400,520 L0,520Z" fill="#c8dff0" opacity="0.3"/>
+
+      <!-- 道路ライン（行程順） -->
+      <polyline points="215,390 210,355 205,320 195,275 185,230 175,180 170,140 175,105" 
+        fill="none" stroke="#f0c040" stroke-width="3" stroke-dasharray="8,5" opacity="0.9"/>
+
+      <!-- Day2: 安達太良山エリア (福島) -->
+      <circle cx="215" cy="395" r="22" fill="#4a7c23" opacity="0.9"/>
+      <text x="215" y="390" text-anchor="middle" font-size="18">🥾</text>
+      <text x="215" y="403" text-anchor="middle" font-size="7" fill="white" font-weight="bold">安達太良山</text>
+      <rect x="240" y="385" width="50" height="16" fill="white" rx="3" opacity="0.85"/>
+      <text x="265" y="396" text-anchor="middle" font-size="8" fill="#4a7c23" font-weight="bold">Day2</text>
+
+      <!-- 岳温泉 -->
+      <circle cx="235" cy="370" r="12" fill="#FF9800" opacity="0.9"/>
+      <text x="235" y="374" text-anchor="middle" font-size="10">♨️</text>
+
+      <!-- Day3: 月山エリア (山形) -->
+      <circle cx="170" cy="220" r="22" fill="#2e86c1" opacity="0.9"/>
+      <text x="170" y="215" text-anchor="middle" font-size="18">🥾</text>
+      <text x="170" y="228" text-anchor="middle" font-size="7" fill="white" font-weight="bold">月山</text>
+      <rect x="195" y="210" width="50" height="16" fill="white" rx="3" opacity="0.85"/>
+      <text x="220" y="221" text-anchor="middle" font-size="8" fill="#2e86c1" font-weight="bold">Day3</text>
+
+      <!-- やまぶし温泉 -->
+      <circle cx="150" cy="200" r="12" fill="#FF9800" opacity="0.9"/>
+      <text x="150" y="204" text-anchor="middle" font-size="10">♨️</text>
+
+      <!-- 酒田ラーメン -->
+      <circle cx="135" cy="170" r="12" fill="#F44336" opacity="0.9"/>
+      <text x="135" y="174" text-anchor="middle" font-size="10">🍽️</text>
+
+      <!-- Day4: 鳥海山エリア (秋田・山形) -->
+      <circle cx="165" cy="130" r="22" fill="#8b5e3c" opacity="0.9"/>
+      <text x="165" y="125" text-anchor="middle" font-size="18">🥾</text>
+      <text x="165" y="138" text-anchor="middle" font-size="7" fill="white" font-weight="bold">鳥海山</text>
+      <rect x="190" y="120" width="50" height="16" fill="white" rx="3" opacity="0.85"/>
+      <text x="215" y="131" text-anchor="middle" font-size="8" fill="#8b5e3c" font-weight="bold">Day4</text>
+
+      <!-- あぽん西浜 -->
+      <circle cx="145" cy="148" r="12" fill="#FF9800" opacity="0.9"/>
+      <text x="145" y="152" text-anchor="middle" font-size="10">♨️</text>
+
+      <!-- 山形長屋酒場 -->
+      <circle cx="205" cy="265" r="12" fill="#F44336" opacity="0.9"/>
+      <text x="205" y="269" text-anchor="middle" font-size="10">🍽️</text>
+
+      <!-- Day5: 蔵王山エリア -->
+      <circle cx="210" cy="310" r="22" fill="#7d3c98" opacity="0.9"/>
+      <text x="210" y="305" text-anchor="middle" font-size="18">🥾</text>
+      <text x="210" y="318" text-anchor="middle" font-size="7" fill="white" font-weight="bold">蔵王山</text>
+      <rect x="235" y="300" width="50" height="16" fill="white" rx="3" opacity="0.85"/>
+      <text x="260" y="311" text-anchor="middle" font-size="8" fill="#7d3c98" font-weight="bold">Day5</text>
+
+      <!-- 蔵王温泉大露天風呂 -->
+      <circle cx="225" cy="330" r="12" fill="#FF9800" opacity="0.9"/>
+      <text x="225" y="334" text-anchor="middle" font-size="10">♨️</text>
+
+      <!-- Day6: 西吾妻山エリア (裏磐梯) -->
+      <circle cx="200" cy="365" r="22" fill="#1e8449" opacity="0.9"/>
+      <text x="200" y="360" text-anchor="middle" font-size="18">🥾</text>
+      <text x="200" y="373" text-anchor="middle" font-size="7" fill="white" font-weight="bold">西吾妻山</text>
+      <rect x="155" y="355" width="42" height="16" fill="white" rx="3" opacity="0.85"/>
+      <text x="176" y="366" text-anchor="middle" font-size="8" fill="#1e8449" font-weight="bold">Day6</text>
+
+      <!-- 香の湯 -->
+      <circle cx="185" cy="385" r="12" fill="#FF9800" opacity="0.9"/>
+      <text x="185" y="389" text-anchor="middle" font-size="10">♨️</text>
+
+      <!-- なかじま -->
+      <circle cx="195" cy="415" r="12" fill="#F44336" opacity="0.9"/>
+      <text x="195" y="419" text-anchor="middle" font-size="10">🍽️</text>
+
+      <!-- 日本海ラベル -->
+      <text x="55" y="200" text-anchor="middle" font-size="11" fill="#5a8fc0" font-style="italic" opacity="0.8">日本海</text>
+
+      <!-- 凡例 -->
+      <rect x="10" y="450" width="380" height="58" fill="white" rx="8" opacity="0.9"/>
+      <circle cx="35" cy="465" r="8" fill="#4CAF50"/>
+      <text x="48" y="469" font-size="10" fill="#333">🥾 登山</text>
+      <circle cx="110" cy="465" r="8" fill="#FF9800"/>
+      <text x="123" y="469" font-size="10" fill="#333">♨️ 温泉</text>
+      <circle cx="185" cy="465" r="8" fill="#F44336"/>
+      <text x="198" y="469" font-size="10" fill="#333">🍽️ グルメ</text>
+      <line x1="280" y1="461" x2="310" y2="461" stroke="#f0c040" stroke-width="3" stroke-dasharray="5,3"/>
+      <text x="315" y="469" font-size="10" fill="#333">行程</text>
+
+      <!-- Day色ドット -->
+      <circle cx="35" cy="488" r="7" fill="#4a7c23"/>
+      <text x="46" y="492" font-size="9" fill="#333">Day2:福島</text>
+      <circle cx="105" cy="488" r="7" fill="#2e86c1"/>
+      <text x="116" y="492" font-size="9" fill="#333">Day3:山形</text>
+      <circle cx="175" cy="488" r="7" fill="#8b5e3c"/>
+      <text x="186" y="492" font-size="9" fill="#333">Day4:秋田</text>
+      <circle cx="245" cy="488" r="7" fill="#7d3c98"/>
+      <text x="256" y="492" font-size="9" fill="#333">Day5:蔵王</text>
+      <circle cx="315" cy="488" r="7" fill="#1e8449"/>
+      <text x="326" y="492" font-size="9" fill="#333">Day6:裏磐梯</text>
+
+      <!-- タイトル -->
+      <rect x="10" y="10" width="380" height="30" fill="#1a3a0a" rx="6" opacity="0.85"/>
+      <text x="200" y="30" text-anchor="middle" font-size="13" fill="white" font-weight="bold">🚗 東北絶景5座踏破 全行程ルート</text>
+    </svg>
+  </div>
+
+  <div class="map-legend-box">
+    <div class="map-legend-item"><span class="ml-dot ml-mountain"></span>🥾 登山</div>
+    <div class="map-legend-item"><span class="ml-dot ml-onsen"></span>♨️ 温泉</div>
+    <div class="map-legend-item"><span class="ml-dot ml-food"></span>🍽️ グルメ</div>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot ld-a"></div>案A：ホテル・前乗り重視</div>
+    <div class="legend-item"><div class="legend-dot ld-b"></div>案B：ゲストハウス・利便性重視</div>
+    <div class="legend-item"><div class="legend-dot ld-c"></div>案C：キャンプ・自然派</div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-card day2">
+    <div class="day-header">
+      <div class="day-number">2</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 2</div>
+        <div class="day-title">安達太良山登山と<br>山形への先回り</div>
+      </div>
+      <div class="day-icon">🌿</div>
+    </div>
+
+    <div class="illust-banner illust-adatara">
+      <div class="banner-text">🏔 安達太良山 1,700m ｜ 福島県　<a href="https://yamap.com/mountains/157" target="_blank" style="color:#ffe066;font-size:11px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px;text-decoration:none;">📍 YAMAPで見る</a></div>
+      <a href="https://yamap.com/mountains/157" target="_blank" class="yamap-btn">YAMAPで見る →</a>
+      <div class="banner-mountain">⛰️</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">12:30</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🥾</span><span class="item-name">安達太良山 登山</span>
+          <div class="item-desc">約4時間 ／ 高村光太郎「智恵子抄」の名峰</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">17:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">♨️</span><span class="item-name"><a href="https://www.dakeonsen.or.jp/higaeri" target="_blank" style="color:inherit;text-decoration:underline dotted;">岳温泉（日帰り温泉）</a></span>
+          <div class="item-desc">立ち寄り湯で疲れを癒す</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">18:00</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🍽️</span><span class="item-name">お食事処 成駒</span>
+          <div class="item-desc">名物ソースかつ丼</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a">
+          <div class="accom-icon">🏨</div>
+          <div class="accom-label">案 A</div>
+          <div class="accom-name">ホテルリブマックス天童</div>
+          <div class="accom-note">移動約1.5h｜翌日月山へ前乗り</div>
+        </div>
+        <div class="accom-option accom-b">
+          <div class="accom-icon">🛖</div>
+          <div class="accom-label">案 B</div>
+          <div class="accom-name">YUMORI ONSEN HOSTEL</div>
+          <div class="accom-note">土湯温泉｜登山口から近く楽</div>
+        </div>
+        <div class="accom-option accom-c">
+          <div class="accom-icon">⛺</div>
+          <div class="accom-label">案 C</div>
+          <div class="accom-name">フォレストパークあだたら</div>
+          <div class="accom-note">高規格キャンプ場｜登山口至近</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-card day3">
+    <div class="day-header">
+      <div class="day-number">3</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 3</div>
+        <div class="day-title">出羽三山の主峰<br>月山へ</div>
+      </div>
+      <div class="day-icon">🌨️</div>
+    </div>
+
+    <div class="illust-banner illust-gassan">
+      <div class="banner-text">🏔 月山 1,984m ｜ 山形県　<a href="https://yamap.com/mountains/43" target="_blank" style="color:#ffe066;font-size:11px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px;text-decoration:none;">📍 YAMAPで見る</a></div>
+      <a href="https://yamap.com/mountains/43" target="_blank" class="yamap-btn">YAMAPで見る →</a>
+      <div class="banner-mountain">🗻</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">11:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🥾</span><span class="item-name">月山 登山</span>
+          <div class="item-desc">約5時間 ／ 出羽三山の主峰・信仰の山</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">17:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">♨️</span><span class="item-name"><a href="http://yupoka.jp/" target="_blank" style="color:inherit;text-decoration:underline dotted;">やまぶし温泉ゆぽか</a></span>
+          <div class="item-desc">霊峰の麓で体を温める</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">18:30</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🍽️</span><span class="item-name"><a href="https://kachou.jp/" target="_blank" style="color:inherit;text-decoration:underline dotted;">酒田ラーメン 花鳥風月</a></span>
+          <div class="item-desc">酒田ラーメン・海老ワンタンメン・花鳥風月ラーメン</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a">
+          <div class="accom-icon">🏨</div>
+          <div class="accom-label">案 A</div>
+          <div class="accom-name">ホテルリブマックス天童</div>
+          <div class="accom-note">連泊or移動｜山形観光に便利</div>
+        </div>
+        <div class="accom-option accom-b">
+          <div class="accom-icon">🏢</div>
+          <div class="accom-label">案 B</div>
+          <div class="accom-name">酒田市内ビジネスホテル</div>
+          <div class="accom-note">酒田駅周辺｜運転疲れを軽減</div>
+        </div>
+        <div class="accom-option accom-c">
+          <div class="accom-icon">⛺</div>
+          <div class="accom-label">案 C</div>
+          <div class="accom-name">西浜コテージ村・キャンプ場</div>
+          <div class="accom-note">日本海に面した絶景サイト</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-card day4">
+    <div class="day-header">
+      <div class="day-number">4</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 4</div>
+        <div class="day-title">東北の名峰・鳥海山と<br>山形の夜</div>
+      </div>
+      <div class="day-icon">🌅</div>
+    </div>
+
+    <div class="illust-banner illust-chokai">
+      <div class="banner-text">🏔 鳥海山 2,236m ｜ 秋田・山形県境　<a href="https://yamap.com/mountains/154" target="_blank" style="color:#ffe066;font-size:11px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px;text-decoration:none;">📍 YAMAPで見る</a></div>
+      <a href="https://yamap.com/mountains/154" target="_blank" class="yamap-btn">YAMAPで見る →</a>
+      <div class="banner-mountain">🌋</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">07:30</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🥾</span><span class="item-name">鳥海山 登山</span>
+          <div class="item-desc">約7.5時間の本格登山 ／ 出羽富士</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">16:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">♨️</span><span class="item-name"><a href="http://www.chokai-yuza.com/apon/" target="_blank" style="color:inherit;text-decoration:underline dotted;">鳥海温泉あぽん西浜</a></span>
+          <div class="item-desc">あぽん西浜 大平山荘・とりみ亭</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">19:00</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🍽️</span><span class="item-name">山形長屋酒場</span>
+          <div class="item-desc">山形市内にて芋煮と地酒</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a">
+          <div class="accom-icon">🏨</div>
+          <div class="accom-label">案 A</div>
+          <div class="accom-name">山形駅周辺ビジネスホテル</div>
+          <div class="accom-note">繁華街に近く夕食後すぐ休める</div>
+        </div>
+        <div class="accom-option accom-b">
+          <div class="accom-icon">🏡</div>
+          <div class="accom-label">案 B</div>
+          <div class="accom-name">ゲストハウス ミンタロハット</div>
+          <div class="accom-note">蔵王温泉エリア｜アットホーム</div>
+        </div>
+        <div class="accom-option accom-c">
+          <div class="accom-icon">⛺</div>
+          <div class="accom-label">案 C</div>
+          <div class="accom-name">西蔵王公園キャンプ場</div>
+          <div class="accom-note">山形市一望の高台｜1週間前要予約</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-card day5">
+    <div class="day-header">
+      <div class="day-number">5</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 5</div>
+        <div class="day-title">蔵王お釜と<br>裏磐梯への移動</div>
+      </div>
+      <div class="day-icon">🟢</div>
+    </div>
+
+    <div class="illust-banner illust-zao">
+      <div class="banner-text">🏔 蔵王山 1,841m ｜ 宮城・山形県境　<a href="https://yamap.com/mountains/191" target="_blank" style="color:#ffe066;font-size:11px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px;text-decoration:none;">📍 YAMAPで見る</a></div>
+      <a href="https://yamap.com/mountains/191" target="_blank" class="yamap-btn">YAMAPで見る →</a>
+      <div class="banner-mountain">🌊</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">10:30</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🥾</span><span class="item-name">蔵王山 散策</span>
+          <div class="item-desc">お釜展望〜熊野岳 往復</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">13:30</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">♨️</span><span class="item-name"><a href="https://www.jupeer-zao.com/roten/" target="_blank" style="color:inherit;text-decoration:underline dotted;">蔵王温泉 大露天風呂</a></span>
+          <div class="item-desc">乳白色の硫黄泉</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">15:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🍡</span><span class="item-name"><a href="https://dondonyaki.net/" target="_blank" style="color:inherit;text-decoration:underline dotted;">おやつ屋さん</a></span>
+          <div class="item-desc">どんどん焼きテイクアウト</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">15:30</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🚗</span><span class="item-name">裏磐梯エリアへ移動</span>
+          <div class="item-desc">約110km ／ 17:00着予定</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補（Day6と連泊推奨）</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a">
+          <div class="accom-icon">🏨</div>
+          <div class="accom-label">案 A</div>
+          <div class="accom-name">裏磐梯レイクリゾート</div>
+          <div class="accom-note">五色沼近く｜リゾート気分</div>
+        </div>
+        <div class="accom-option accom-b">
+          <div class="accom-icon">🏡</div>
+          <div class="accom-label">案 B</div>
+          <div class="accom-name">ゲストハウス 會津野</div>
+          <div class="accom-note">会津美里町｜古民家風の宿</div>
+        </div>
+        <div class="accom-option accom-c">
+          <div class="accom-icon">⛺</div>
+          <div class="accom-label">案 C</div>
+          <div class="accom-name">裏磐梯湖畔オートキャンプ場</div>
+          <div class="accom-note">桧原湖畔の絶景サイト</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day-card day6">
+    <div class="day-header">
+      <div class="day-number">6</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 6</div>
+        <div class="day-title">西吾妻山登山と<br>会津グルメ</div>
+      </div>
+      <div class="day-icon">🌲</div>
+    </div>
+
+    <div class="illust-banner illust-nishiazuma">
+      <div class="banner-text">🏔 西吾妻山 2,035m ｜ 福島・山形県境　<a href="https://yamap.com/mountains/156" target="_blank" style="color:#ffe066;font-size:11px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px;text-decoration:none;">📍 YAMAPで見る</a></div>
+      <a href="https://yamap.com/mountains/156" target="_blank" class="yamap-btn">YAMAPで見る →</a>
+      <div class="banner-mountain">🚠</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">09:30</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🥾</span><span class="item-name">西吾妻山 登山</span>
+          <div class="item-desc">ロープウェイ利用 ／ 約4.5時間</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">15:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">♨️</span><span class="item-name">裏磐梯温泉 香の湯</span>
+          <div class="item-desc">5座踏破の疲れを癒す</div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">17:30</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🍽️</span><span class="item-name"><a href="http://www.nakanoshima-aizu.jp/nakajimahp/subt.html" target="_blank" style="color:inherit;text-decoration:underline dotted;">元祖煮込みソースカツ丼 なかじま</a></span>
+          <div class="item-desc">昭和23年創業・日本中ここだけのソース煮込みカツ丼</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a" style="grid-column: 1/-1; max-width: 100%;">
+          <div class="accom-icon">🔁</div>
+          <div class="accom-label">Day 5 と同じ場所での連泊を推奨</div>
+          <div class="accom-name">裏磐梯レイクリゾート ／ ゲストハウス會津野 ／ 裏磐梯湖畔オートキャンプ場</div>
+          <div class="accom-note">チェックアウト・移動の手間が省けて翌日の登山に備えられる</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="day-card day7">
+    <div class="day-header">
+      <div class="day-number">7</div>
+      <div class="day-title-block">
+        <div class="day-label">Day 7</div>
+        <div class="day-title">東北からの帰還と<br>浜松</div>
+      </div>
+      <div class="day-icon">🌊</div>
+    </div>
+
+    <div class="illust-banner illust-hamamatsu">
+      <div class="banner-text">🌅 浜名湖 ｜ 静岡県浜松市</div>
+      <div class="banner-mountain">🏖️</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">13:00</span></div>
+        <div class="dot-line"><div class="dot"></div><div class="line"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🚉</span><span class="item-name">JR相模原駅 着・解散</span>
+          <div class="item-desc"></div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time-col"><span class="time">16:30</span></div>
+        <div class="dot-line"><div class="dot"></div></div>
+        <div class="item-content">
+          <span class="item-emoji">🏕️</span><span class="item-name">渚園キャンプ場 着</span>
+          <div class="item-desc">浜名湖畔の広大な芝生サイト</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accom-section">
+      <div class="accom-title">🏠 宿泊候補</div>
+      <div class="accom-grid">
+        <div class="accom-option accom-a">
+          <div class="accom-icon">🏨</div>
+          <div class="accom-label">案 A</div>
+          <div class="accom-name">浜名湖周辺の観光ホテル</div>
+          <div class="accom-note">うなぎ満喫プランなど</div>
+        </div>
+        <div class="accom-option accom-b">
+          <div class="accom-icon">🏢</div>
+          <div class="accom-label">案 B</div>
+          <div class="accom-name">浜松駅周辺ビジネスホテル</div>
+          <div class="accom-note">浜松餃子のハシゴに便利</div>
+        </div>
+        <div class="accom-option accom-c">
+          <div class="accom-icon">⛺</div>
+          <div class="accom-label">案 C</div>
+          <div class="accom-name">渚園キャンプ場</div>
+          <div class="accom-note">広大な芝生｜翌朝の撤収もスムーズ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-icons">🏔️ ♨️ 🚗 🍽️ ⛺</div>
+  <p>東北絶景5座踏破 8日間ドライブ旅のしおり</p>
+</div>
+
+</body>
+</html>
